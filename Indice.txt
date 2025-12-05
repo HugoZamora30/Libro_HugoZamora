@@ -37,7 +37,26 @@ Capítulo 2:
 
   En tot aquest flux de treball, per a cada commit que fem es generaran noves signatures SHA que apuntaran a la signatura SHA del commit anterior. El HEAD sempre apuntarà a l'últim commit vàlid.
 
-Capítulo 3:
+Capitulo 3:
+Branques
+Quan hem de fer canvis al nostre codi que no siguen immediats, ja siga perquè volem corregir errors, o per afegir codi nou que pot ser inestable, el més pràctic és utilitzar branques. Recordem que una branca és una bifurcació del codi principal que ens permet seguir un camí de desenvolupament diferent, i bé descartar els canvis realitzats o fusionar-los amb la branca principal.
+
+Tot i que pràcticament tots els sistemes de control de versions ofereixen mecanismes per treballar amb branques, la manera com Git les gestiona fa que sobreisca sobre la resta, sent extremadament ràpid i senzill realitzar el canvi.
+
+Vegem-ne un petit exemple de funcionament:
+
+Com podem veure, hi ha tres confirmacions a la branca principal (master). A partir d'aquest tercer commit, es crea la branca de proves, a la qual s'afegeixen tres commits més, corresponents a canvis no definitius al codi. Finalment, una vegada validats aquests canvis i comprovat-ne el funcionament, es fusionen amb el contingut de la branca Màster.
+
+Hem de tenir en compte, que a cada moment, el HEAD apuntarà a l'últim commit realitzat.
+
+Treballant amb branques
+Anem a fer un cas pràctic on crearem un nou repositori per treballar amb branques. És important que recordeu que una branca era una bifurcació de la branca principal de desenvolupament que ens permet seguir treballant en noves funcionalitats per a les nostres aplicacions o fent proves sense necessitat de modificar la branca principal.
+
+Preparació del repositori
+Anem a partir d'una carpeta per a un projecte sota control de versions. Per preparar aquest escenari, fem els passos següents:
+
+
+Capítulo 4:
   Repositoris remots:
     Per ara hem vist com crear i gestionar repositoris amb Git, així com treballar amb diferents branques, sempre de forma local. Quan treballem en un equip deslocalitzat, necessitem compartir aquest treball local. És ací on entra en acció l'arquitectura distribuïda de Git.
 
